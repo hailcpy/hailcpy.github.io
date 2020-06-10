@@ -1,8 +1,11 @@
-
 i=0;
 j=1;
 endReached=1
-
+// stacki = []
+// stackj = []
+// document.querySelector('.next').addEventListener('click',function(){
+    
+// })
 
 // document.querySelector('.Submit').addEventListener('click',function(){
     
@@ -21,8 +24,8 @@ endReached=1
 function uncheck(){
     var k =1
     for(k = 1;k<4;k++){
-        $("#similar"+k).checked = false;
-        $('#dissimilar'+k).checked = false;
+        $('#similar'+k).prop("checked",false);
+        $('#dissimilar'+k).prop("checked",false);
     }
 };
 
@@ -40,32 +43,6 @@ function submitform(){
 var request;
 // Bind to the submit event of our form
 $("#foo").submit(function(event){
-
-    // uncheck()
-    //sendData
-    if(i>=118)
-    {
-        endReached=1;
-        // submitform()
-    }
-    else
-    {
-        if(i==117&&j>=120)
-        {
-            $(".next").textContent = 'Submit'
-        }
-        if(j>=120)
-        {
-            // stacki.append(i)
-            // stackj.append(j)
-            i+=1;
-            j=i+1;
-        }
-        $(".image1").attr("src", '/animals/stim'+i+'.png');
-        $(".image2").attr("src", '/animals/stim'+j+'.png');
-        // stackj.append(j)
-        j+=1;
-    }
 
     // Abort any pending request
     if (request) {
@@ -93,6 +70,31 @@ $("#foo").submit(function(event){
         type: "post",
         data: serializedData
     });
+    j+=1;
+    uncheck()
+    //sendData
+    if(i>=118)
+    {
+        endReached=1;
+        // submitform()
+    }
+    else
+    {
+        if(i==117&&j>=120)
+        {
+            $(".next").textContent = 'Submit'
+        }
+        if(j>=120)
+        {
+            // stacki.append(i)
+            // stackj.append(j)
+            i+=1;
+            j=i+1;
+        }
+        $(".image1").attr("src", '/animals/stim'+i+'.png');
+        $(".image2").attr("src", '/animals/stim'+j+'.png');
+        // stackj.append(j)
+    }
 
     // // Callback handler that will be called on success
     // request.done(function (response, textStatus, jqXHR){
@@ -122,23 +124,4 @@ $("#foo").submit(function(event){
     // Prevent default posting of form
     event.preventDefault();
 });
-
-// document.querySelector('.back').addEventListener('click',function(){
-//     document.querySelector('.image1').src = 'stim'+stacki[-1]+'.png';
-//     document.querySelector('.image2').src = 'stim'+stackj[-1]+'.png';
-//     stackj.remove;
-
-// })
-
-// document.querySelector('.similar').addEventListener('click',featureSelected())
-// document.querySelector('.dissimilar').addEventListener('click',featureSelected())
-
-// var header = document.getElementById("column2");
-// var btns = header.getElementsByClassName("feature1");
-
-
-// function featureSelected(){
-    
-// };
-
 
