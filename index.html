@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
+        <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+        <link type="text/css" rel="stylesheet" href="https://github.com/hailcpy/experiment/blob/master/myfile.css">
+    </head>
+
+
+
+<body>
+ <div class="row">
+    <div id="heading"><h1>Select the similar and dissimilar features between the given pair:</h1></div>
+  <div class="column">
+    <img src="stim0.png" alt="Snow" style="width:100%" class = "image1">
+  </div>
+  <div class="column">
+    <img src="stim1.png" alt="Forest" style="width:100%" class = "image2">
+  </div>
+</div> 
+<div class="column" id="column2">
+    <h3 style="text-align: center;">Features Similarity</h3>
+    <table style="width:100%">
+          <td>Face shape</td>
+          <td><input type="radio" id="similar1" name="feature1" value="similar"><label for="similar1">Similar</label></td>
+          <td><input type="radio" id="dissimilar1" name="feature1" value="dissimilar"><label for="dissimilar1">Dissimilar</label></td>
+        </tr>
+        <tr>
+          <td>Face size</td>
+          <td><input type="radio" id="similar2" name="feature2" value="similar"><label for="similar2">Similar</label></td>
+          <td><input type="radio" id="dissimilar2" name="feature2" value="dissimilar"><label for="dissimilar2">Dissimilar</label></td>          
+        </tr>
+        <tr>
+            <td>Face colour</td>
+            <td><input type="radio" id="similar3" name="feature3" value="similar"><label for="similar3">Similar</label></td>
+          <td><input type="radio" id="dissimilar3" name="feature3" value="dissimilar"><label for="dissimilar3">Dissimilar</label></td>
+          </tr>
+      </table> 
+      <!-- <button class = "back">Back</button> -->
+      <button class = "next">Next</button>
+      <br>
+      <button class = 'Submit'>Submit</button>
+</div>
+<script src="https://github.com/hailcpy/experiment/blob/master/myfile.js"></script>
+</body>
+</html>
