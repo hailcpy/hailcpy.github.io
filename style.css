@@ -1,0 +1,68 @@
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ .column {
+    float: left;
+    width: 28%;
+    margin-top: 2%;
+    margin-left: 15%;
+    
+  }
+  
+  /* Clear floats after image containers */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  } 
+
+#heading
+{
+   text-align: center;
+   color: crimson;
+   font-size: medium;
+}
+
+#column2
+{
+  text-align: center;
+  padding-left: 23%;
+  margin-top: 2%;
+  font-size: 20px;
+}
+.next
+{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 20px;
+}
+.back
+{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.submit
+{
+  text-align: center;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+.similar{
+    color:black;
+    background-color: white;
+    border: 2px solid blue;
+}
+.dissimilar{
+    color: black;
+    background-color: white;
+    border: 2px solid green
+}
+.similar:hover{
+    background-color: blue;
+    color: white;
+}
+.dissimilar:hover{
+    background-color: green;
+    color: white;
+}
