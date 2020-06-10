@@ -25,8 +25,8 @@ document.querySelector('.next').addEventListener('click',function(){
             i+=1;
             j=i+1;
         }
-        document.querySelector('.image1').src = 'animals/'+'stim'+i+'.png';
-        document.querySelector('.image2').src = 'animals/'+'stim'+j+'.png';
+        document.querySelector('.image1').src = '/animals/'+'stim'+i+'.png';
+        document.querySelector('.image2').src = '/animals/'+'stim'+j+'.png';
         // stackj.append(j)
         j+=1;
     }
