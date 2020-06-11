@@ -1,0 +1,80 @@
+ /* Three image containers (use 25% for four, and 50% for two, etc) */
+ body{
+   background-image: url("utils/back3.jpg");
+ }
+.column {
+  float: left;
+  width: 28%;
+  margin-top: 2%;
+  margin-left: 15%;
+  
+}
+  
+  /* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+} 
+
+#heading
+{
+   text-align: center;
+   color: black;
+   font-size: medium;
+}
+
+#column2
+{
+  text-align: center;
+  padding-left: 23%;
+  margin-top: 2%;
+  font-size: 20px;
+}
+.image1,.image2
+{
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+.next
+{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 20px;
+}
+.next2
+{
+  text-align: center;
+  margin-top: 0%;
+  font-size: 20px;
+}
+.back
+{
+  text-align: center;
+  margin-top: 5%;
+  font-size: 20px;
+}
+
+.submit
+{
+  text-align: center;
+  margin-top: 2%;
+  font-size: 20px;
+}
+
+td{
+  color: burlywood;
+}
+.next:hover{
+    background-color:lightgray;
+    color: black;
+}
+.next2:hover{
+  background-color:lightgray;
+  color: black;
+}
+/* .dissimilar:hover{
+    background-color: green;
+    color: white;
+} */ 
