@@ -1,7 +1,4 @@
  /* Three image containers (use 25% for four, and 50% for two, etc) */
- body{
-   background-image: url("utils/back3.jpg");
- }
 .column {
   float: left;
   width: 28%;
@@ -64,7 +61,7 @@
 }
 
 td{
-  color: burlywood;
+  color: black;
 }
 .next:hover{
     background-color:lightgray;
