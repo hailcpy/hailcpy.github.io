@@ -33,7 +33,7 @@
   border-style: solid;
   border-width: 2px;
   border-color: black;
-  background-image: url('200.gif');
+  background-image: url('/utils/200.gif');
   background-size: cover;
 }
 .next
