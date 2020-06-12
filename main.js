@@ -23,7 +23,9 @@ $("#foo").submit(function(event){
     }
     console.log(i);
     console.log(j);
-    uncheck()
+    uncheck();
+    $(".image1").attr("src","");
+    $(".image2").attr("src","");
     $(".image1").attr("src", 'animals/stim'+i+'.png');
     $(".image2").attr("src", 'animals/stim'+j+'.png');
 });
