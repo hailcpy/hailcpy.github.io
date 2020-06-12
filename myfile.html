@@ -3,62 +3,69 @@
     <head>
         <meta charset="UTF-8">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
-        <link type="text/css" rel="stylesheet" href="style.css">
+        <link type="text/css" rel="stylesheet" href="/style.css">
     </head>
 <body>
  <div class="row">
     <div id="heading"><h1>Select the similarity dissimilarity of the features between the given images</h1></div>
-  <div class="column">
-    <img src="animals/stim0.png" alt="Snow" style="width:100%" class = "image1">
+  <div class="column1">
+    <img src=""  style="width:75%" class = "image1">
   </div>
-  <div class="column">
-    <img src="animals/stim1.png" alt="Forest" style="width:100%" class = "image2">
+  <div class="column2">
+    <img src="" style="width:75%" class = "image2">
   </div>
-</div> 
-<div class="column" id="column2">
+  <div class="column3">
     <h3 style="text-align: center;">Slide the bar to choose the amount of similarity or dissimilarity</h3>
-    <table style="width:100%">
+    <table>
       <form id = 'foo'>
         <tr>
           <td>Body size</td>
-          <td class="scale">similar<input type="range" id="1" name="Body size" min ="1" max = "5" value="2.5">dissimilar</td>
+          <td><input type="range" id="1" name="Body size" min ="1" max = "5"></td>
+          <td style = "width: 150px;" id = "rangetext1">no idea</td>
         </tr>
         <tr>
           <td>Body shape</td>
-          <td class = "scale">similar<input type="range" id="2" name="Body shape" min ="1" max = "5" value="2.5">dissimilar</td>          
+          <td><input type="range" id="2" name="Body shape" min ="1" max = "5" value="3"></td>         
+          <td style = "width: 150px;" id = "rangetext2">no idea</td> 
         </tr>
         <tr>
             <td>Skin texture</td>
-            <td class = "scale">similar<input type="range" id="3" name="Skin texture" min ="1" max = "5" value="2.5">dissimilar</td>
-        </tr>
+            <td><input type="range" id="3" name="Skin texture" min ="1" max = "5" value="3"></td>
+            <td style = "width: 150px;" id = "rangetext3">no idea</td> 
+          </tr>
         <tr>
           <td>Skin color</td>
-          <td class = "scale">similar<input type="range" id="4" name="Skin color" min ="1" max = "5" value="2.5">dissimilar</td>
+          <td><input type="range" id="4" name="Skin color" min ="1" max = "5" value="3"></td> 
+          <td style = "width: 150px;" id = "rangetext4">no idea</td>
         </tr>
         <tr>
           <td>Facial features</td>
-          <td class = "scale">similar<input type="range" id="5" name="Facial features" min ="1" max = "5" value="2.5">dissimilar</td>
+          <td><input type="range" id="5" name="Facial features" min ="1" max = "5" value="3"></td> 
+          <td style = "width: 150px;" id = "rangetext5">no idea</td>
         </tr>
         <tr>
           <td>Limbs</td>
-          <td class = "scale">similar<input type="range" id="6" name="Limbs" min ="1" max = "5" value="2.5">dissimilar</td>
+          <td><input type="range" id="6" name="Limbs" min ="1" max = "5" value="3"></td> 
+          <td style = "width: 150px;" id = "rangetext6">no idea</td>
         </tr>
         <tr>
           <td>Horns</td>
-          <td class = "scale">similar<input type="range" id="7" name="Horns" min ="1" max = "5" value="2.5">dissimilar</td>
+          <td><input type="range" id="7" name="Horns" min ="1" max = "5" value="3"></td> 
+          <td style = "width: 150px;" id = "rangetext7">no idea</td>
         </tr>
         <tr>
           <td>Tail</td>
-          <td class = "scale">similar<input type="range" id="8" name="Tail" min ="1" max = "5" value="2.5">dissimilar</td>
-        </tr>
-      </table> 
-      <!-- <button class = "back">Back</button> -->
-      <!-- <button class = 'submit' value = 'Next'> -->
+          <td><input type="range" id="8" name="Tail" min ="1" max = "5" value="3"></td> 
+          <td style = "width: 150px;" id = "rangetext8">no idea</td>
+        </tr> 
+        </table>
       <button class = 'next' type = 'submit'>Next</button>
       <button class = 'next2'>Submit</button>
     </form>
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+    </div>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="main.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/main.js"></script>
 </body>
 </html>
