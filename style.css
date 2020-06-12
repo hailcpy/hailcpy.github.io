@@ -60,6 +60,9 @@ td{
   background-color:lightgray;
   color: black;
 }
+.scale{
+  font-size: small;
+}
 /* .dissimilar:hover{
     background-color: green;
     color: white;
