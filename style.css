@@ -1,28 +1,24 @@
- .column1 {
-  float: left;
-  width: 28%;
-  margin-top: 2%;
-  margin-left: 7%; 
-  margin-right: 0%;
+.column1 {
+  position: absolute;
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 100px; 
 }
 
 .column2 {
-  float: left;
-  width: 28%;
-  margin-top: 2%;
-  margin-left: 0%;
-  margin-right: 0%;
+  position: absolute;
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 600px;
 }
 .column3 {
-  float: right;
-  width: 24%;
-  margin-top: 2%;
-  margin-left: 0%; 
-  margin-right: 10%;
+  position: absolute;
+  width: 500px;
+  margin-left: 1150px; 
 }
 table{
-  width: 125%;
-  height: 25em;
+ width:550px;
+ height: 400px;
 }
   /* Clear floats after image containers */
 .row::after {
@@ -48,14 +44,14 @@ table{
 .next
 {
   text-align: center;
-  margin-top: 5%;
-  font-size: 20px;
+  margin-top: 5px;
+  font-size: 15px;
 }
 .next2
 {
   text-align: center;
-  margin-top: 0%;
-  font-size: 20px;
+  margin-top: 5px;
+  font-size: 15px;
 }
 
 td{
