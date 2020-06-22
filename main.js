@@ -8,42 +8,77 @@ $(".image2").attr("src", 'animals/stim'+j+'.png');
 function uncheck(){
     var k =1
     for(k = 1;k<9;k++){
-        $('#'+k).prop("value","2.5");
-        $('#rangetext'+k).text(rangeValues[$('#'+k).val()]);
+        $('#'+k).prop("value","5");
+		$('#'+k).tooltip('hide');
+		$('#checkbox'+k).prop("checked", false);
     }
 };
-var rangeValues =
-{
-    "1": "very dissimilar",
-    "2": "dissimilar",
-    "3": "no idea",
-    "4": "similar",
-    "5": "very similar",
-};
+
 
 $('#1').on('input change' ,function (){
-    $('#rangetext1').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox1').prop("checked", false);
 });
 $('#2').on('input change' ,function (){
-    $('#rangetext2').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox2').prop("checked", false);
 });
 $('#3').on('input change' ,function (){
-    $('#rangetext3').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox3').prop("checked", false);
 });
 $('#4').on('input change' ,function (){
-    $('#rangetext4').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox4').prop("checked", false);
 });
 $('#5').on('input change' ,function (){
-    $('#rangetext5').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox15').prop("checked", false);
 });
 $('#6').on('input change' ,function (){
-    $('#rangetext6').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox6').prop("checked", false);
 });
 $('#7').on('input change' ,function (){
-    $('#rangetext7').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox7').prop("checked", false);
 });
 $('#8').on('input change' ,function (){
-    $('#rangetext8').text(rangeValues[$(this).val()]);
+	$(this).tooltip('show');
+	$('#checkbox8').prop("checked", false);
+});
+
+$('#checkbox1').change(function (){
+	$('#1').prop("value", "5");
+	$('#1').tooltip('hide');
+});
+$('#checkbox2').change(function (){
+	$('#2').prop("value", "5");
+	$('#2').tooltip('hide');
+});
+$('#checkbox3').change(function (){
+	$('#3').prop("value", "5");
+	$('#3').tooltip('hide');
+});
+$('#checkbox4').change(function (){
+	$('#4').prop("value", "5");
+	$('#4').tooltip('hide');
+});
+$('#checkbox5').change(function (){
+	$('#5').prop("value", "5");
+	$('#5').tooltip('hide');
+});
+$('#checkbox6').change(function (){
+	$('#6').prop("value", "5");
+	$('#6').tooltip('hide');
+});
+$('#checkbox7').change(function (){
+	$('#7').prop("value", "5");
+	$('#7').tooltip('hide');
+});
+$('#checkbox8').change(function (){
+	$('#8').prop("value", "5");
+	$('#8').tooltip('hide');
 });
 
 $("#foo").submit(function(event){
