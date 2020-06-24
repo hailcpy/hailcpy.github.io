@@ -141,7 +141,7 @@ function submitform($form){
 
     // Fire off the request to /form.php
     request = $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbwRPwCF3evi73rufIP8MBcpBLrmi1OcRNGSbZBhu5cRqeLIVw/exec",
+        url: "https://script.google.com/macros/s/AKfycbzc4iXyaM74aK8-JvzhUQqe1n34VUVLstSpQVsONbCkuA-ec4U/exec",
         type: "post",
         data: serializedData
     });
@@ -156,8 +156,6 @@ function submitform($form){
 };
 
 $(".next2").click(function(){
-    var $form = $("#foo");
-    submitform($form);
     $("body").replaceWith("<p style  = 'text-align:center; font-size: 50px;'>Thank you for taking part in the experiment</p>");
     
 })
