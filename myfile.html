@@ -2,13 +2,47 @@
 <html lang = "en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1>
+        <meta name="viewport" content="width=device-width", initial-scale=1>
+		<title>
+			Feature based similarity judgement
+		</title>
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-		<link type="text/css" rel="stylesheet" href="/style.css">
     </head>
+	<style>
+		#heading{
+			text-align: center;
+			color: black;
+			font-size: medium;
+		}
+		.image1,.image2{
+			border-style: solid;
+			border-width: 2px;
+			border-color: black;
+			background-image: url('utils/200.gif');
+			background-size: cover;
+		}
+		.next{
+			text-align: center;
+			margin-top: 5px;
+			font-size: 15px;
+		}
+		.next2{
+			text-align: center;
+			margin-top: 5px;
+			font-size: 15px;
+		}
+		.next:hover{
+			background-color:lightgray;
+			color: black;
+		}
+		.next2:hover{
+			background-color:lightgray;
+			color: black;
+		}
+	</style>
 <body>
   <div class="container-fluid">
     <div id="heading"><h1 align = "center">Select the similarity of the features between the given images</h1></div>
@@ -19,72 +53,74 @@
 		<div class = "col-md-4">
 			<img src=""  style="width:100%" class = "image1">
 		</div>
-		<div class = "col-md-4">
-			<img src="" style="width:100%" class = "image2">
-		</div>
-		<div class = "col-md-4" style="background-color:cyan;">
+		<div class = "col-md-4" style="background-color:burlywood;">
 			<h3 style="text-align: center;">Slide the bar to choose the amount of similarity</h3>
 			<center>
 				Scale: <br>
-				(Very Dissimilar)0 ----------5(Neutral) ---------- 10(Very Similar)		      
+				0(Very Dissimilar)----------5(Neutral) ---------- 10(Very Similar)		      
 			</center>
 			<br>
 			<table>
 			  <form id = 'foo'>
 				<tr>
-				  <td>Body shape</td>
-				  <td><input type="range" id="1" name="Body shape" min ="0" max = "10" value="5"></td>         
-				  <td style="width: 50px" id = "rangetext1"></td>  
-				  <td><input type="checkbox" name="Body shape" id="checkbox1">Can't Judge
+				  <th>Body shape</th>
+				  <td><input type="range" id="1" name="body_shape" min ="0" max = "10" value="5"></td>         
+				  <td style="width: 50px" id = "rangetext1">Slide</td>  
+				  <th><input type="checkbox" name="body_shape_judge" id="checkbox1" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <td>Skin texture</td>
-				  <td><input type="range" id="2" name="Skin texture" min ="0" max = "10" value="5"></td>
-				  <td id = "rangetext2"></td>
-				  <td><input type="checkbox" name="Skin texture" id="checkbox2">Can't Judge
+				  <th>Skin texture</th>
+				  <td><input type="range" id="2" name="skin_texture" min ="0" max = "10" value="5"></td>
+				  <td id = "rangetext2">Slide</td>
+				  <th><input type="checkbox" name="skin_texture_judge" id="checkbox2" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <td>Skin color</td>
-				  <td><input type="range" id="3" name="Skin color" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext3"></td>
-				  <td><input type="checkbox" name="Skin color" id="checkbox3">Can't Judge
+				  <th>Skin color</th>
+				  <td><input type="range" id="3" name="skin_color" min ="0" max = "10" value="5"></td> 
+				  <td id = "rangetext3">Slide</td>
+				  <th><input type="checkbox" name="skin_color_judge" id="checkbox3" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <td>Facial features</td>
-				  <td><input type="range" id="4" name="Facial features" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext4"></td>
-				  <td><input type="checkbox" name="Facial features" id="checkbox4">Can't Judge
+				  <th>Facial features</th>
+				  <td><input type="range" id="4" name="facial_features" min ="0" max = "10" value="5"></td> 
+				  <td id = "rangetext4">Slide</td>
+				  <th><input type="checkbox" name="facial_features_judge" id="checkbox4" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <td>Limbs</td>
-				  <td><input type="range" id="5" name="Limbs" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext5"></td>
-				  <td><input type="checkbox" name="limbs" id="checkbox5">Can't Judge
+				  <th>Limbs</th>
+				  <td><input type="range" id="5" name="limbs" min ="0" max = "10" value="5"></td> 
+				  <td id = "rangetext5">Slide</td>
+				  <th><input type="checkbox" name="limbs_judge" id="checkbox5" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <td>Horns</td>
-				  <td><input type="range" id="6" name="Horns" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext6"></td>
-				  <td><input type="checkbox" name="Horns" id="checkbox6">Can't Judge
+				  <th>Horns</th>
+				  <td><input type="range" id="6" name="horns" min ="0" max = "10" value="5"></td> 
+				  <td id = "rangetext6">Slide</td>
+				  <th><input type="checkbox" name="horns_judge" id="checkbox6" value="cant">Can't Judge
 				</tr>
 				<tr>
-				  <td>Mouth</td>
-				  <td><input type="range" id="7" name="Mouth" min ="0" max = "10" value="5"></td> 
-				  <td id = "rangetext7"></td>
-				  <td><input type="checkbox" name="Mouth" id="checkbox7">Can't Judge
+				  <th>Mouth</th>
+				  <td><input type="range" id="7" name="mouth" min ="0" max = "10" value="5"></td> 
+				  <td id = "rangetext7">Slide</td>
+				  <th><input type="checkbox" name="mouth_judge" id="checkbox7" value="cant">Can't Judge
 				</tr> 
 				<tr>
-				  <td>Overall Similarity</td>
-				  <td><input type="range" id="8" name="Overall" min ="0" max = "10" value = "5"></td>
-				  <td id = "rangetext8"></td>
-				  <td><input type="checkbox" name="Overall" id="checkbox8">Can't Judge
+				  <th>Overall Similarity</th>
+				  <td><input type="range" id="8" name="overall" min ="0" max = "10" value = "5"></td>
+				  <td id = "rangetext8">Slide</td>
+				  <th><input type="checkbox" name="overall_judge" id="checkbox8" value="cant">Can't Judge
 				</tr>
 				</table>
 				<br>
+				<center>
 			  <button class = 'next' type = 'submit'>Next</button>
 			  <button class = 'next2'>Submit</button>
+			  </center>
 			</form>
 			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+		</div>
+		<div class = "col-md-4">
+			<img src="" style="width:100%" class = "image2">
 		</div>
 	</div>
   </div>

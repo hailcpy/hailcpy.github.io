@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width", initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>
@@ -10,43 +10,94 @@
     </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	
+	<style>
+		body{
+			background-color: grey;
+		}
+		.top_head{
+			color: white;
+			background-color: black;
+			text-align: center;
+			padding-left:10px;
+			padding-right:10px;
+			padding-top:5px;
+			padding-bottom:5px;
+		}
+		.main{
+			color: black;
+			background-color:white;
+			padding-left:10px;
+			padding-right:10px;
+			padding-top:5px;
+			padding-bottom:5px;
+			margin-bottom:20px;
+		}
+		.index_head{
+			background-color:blue;
+			margin-top:20px;
+			margin-left:10px;
+			margin-right:10px;
+			padding-left:10px;
+			padding-right:10px;
+			padding-top:5px;
+			padding-bottom:5px;
+			color:white;
+			font-size:20px;
+			font-weight:bold;
+		}
+		.index_content{
+			margin-top:10px;
+			margin-left:10px;
+			margin-right:10px;
+			font-size:15px;
+		}
+	</style>
   </head>
   <body>
-    <main role="main" class="container">
-      <div class="col-xs-12 col-md-12">
-        <br><br><br><br><br>
-        <div class="row justify-content-md-center justify-content-xs-center border-bottom" style="padding-bottom: 2rem;">
-            <div class="hero">
-              <h1 class="display-6">Please do the following experiment according to the given instructions:</h1>
-            </div>
-        </div>
-        <div>
-            <p>Instructions:</p>
-            <ul>
-                <li>There a lot of trials required for this experiment so please do atleast 15 trials. Press Submit whenever you don't want to attempt more trials</li>
-                <li>You are given 2 images and a scale for different features in the images</li>
-                <li>For each feature rate the similarity or dissimilarity of that feature in the given two images</li>
-                <li>1 (extreme left) means completely dissimilar and 5 (extreme right) means completely similar</li>
-                <li>Default is 3 which means no idea!</li>
-                <li><p>For eg:</p>
-                <ul>
-                    <li>If dog and wolf have the same body size choose greater than 3 on scale for option body size for comparison between dog and wolf</li>
-                    <li>Similarly if deer and elephant have different body shapes choose less than 3</li>
-                </ul> </li>
-            </ul> 
-        </div>
-        <br><br>
-        <div class="row justify-content-md-center justify-content-xs-center">
-          <center><div id="exp1"><a href="myfile.html" target="_blank"><button type="button" class="btn btn-outline-dark"  style="padding: 1rem 2rem;">Experiment 1</button></a></div></center>
-        </div>
-        <br><br>
-        <div class="row justify-content-md-center justify-content-xs-center bg-light"  style="padding: 2rem;">
-          Recommended device: Laptop <br>If any experiment is not working, try copying the url and open it in a new tab. If there’s still some issue with the survey links (like not running) or in case of any clarification, please contact Aditya Jindal (jaditya@iitk.ac.in). <br>Thank you!
-        </div>
-      </div>
-
-    </main>
+	<div class="top_head">
+		<h1> Welcome </h1>
+	</div>
+	<br>
+	<div class="main container">
+		<div class="index_head"> About this experiment </div>
+		<div class="index_content">
+			<p>This experiment is called <b><i> Feature based Similarity Judgement </i></b> and is being conducted as part of our project <b>"Comparing DNN features with Psychological representaions"</b> with Brain & Cognitive Society, IIT Kanpur.
+			
+			<p>The experiment consists of 7260 randomly sequenced trials. Since this is a voluntarily taken survey without incentives, you are free to do as many trials as you want as long as you are doing them honestly. However, given the large number of possible trials, we urge you to do atleast 50 of them.
+			
+			<p>In each trial, you will be shown two images of animals along with a list of features. For each feature, you will have to judge the amount of similarity in the two images on a scale of 0-10 with 0 being "Not similar at all" or "Very Dissimilar" and 10 being "Very Similar". However, note that your judgement should be based only on the images and not on your general perception of the animals in those images. To account for the cases when some features are not visible in the images, we have also provided a "Can't judge" option. Our instructions page will help you understand how to rate different features and how to procced to next trials and submit the experiment. 
+		</div>
+		<div class="index_head"> About this project </div>
+		<div class="index_content">
+			<p><a href = "https://arxiv.org/abs/1608.02164" target="_blank">Peterson et al., 2016</a> attempted to evaluate the relation between deep representations and mental representations for making similarity judgments and see how well the former aligns with the latter. The similarity judgments, in turn were calculated by taking a weighted inner product of the feature representations of the two objects. Results from the paper revealed that comparatively much better results were obtained when the weights were calculated using a regression technique rather than when they were considered to be constant unity. This seems to produce very favorable results and would indicate that deep learned representations can represent psychological representations. In this project, we are trying to comment on the validity of their results by firstly replicating their work and testing it against adversarial attacks generated using FGSM. Then we employ other state-of-the-art models with different changes to check if the method is really adapting to psychological representations. Further we attempt to extend this idea of DNN features capturing psychological representations by desigining an experiment that actually records information on the features used by humans to judge images and also by conducting experiments in other domains of deep learning.  
+		</div>
+		<div class="index_head"> Technical requirements </div>
+		<div class="index_content">
+			<p>The experiment is designed such that it can be performed on any screen. However, we recommend using a <b>laptop or any bigger screen</b> so that there is no disturbance in the stimulus.
+		</div>
+		<div class="index_head">Proceed to the experiment</div>
+		<div class="index_content">
+			<p>If you are willing to perform the experiment genuinely, then
+			<p><a href="instructions.html" target="_blank"><button type="button" class="btn btn-outline-dark">Click here to proceed to the instructions page</button></a> 
+			<p>Else, <a href="https://www.google.com"> Click here if you don't want to participate. </a>
+		</div>
+		<div class="index_head">Contact information</div>
+		<div class="index_content">
+			<p>For any information or issues related to the experiment, please contact </p>
+			Aditya Jindal<br>
+			IIT Kanpur<br>
+			Email: <a href ="mailto:jadtiya@iitk.ac.in" target="_blank">jaditya@iitk.ac.in</a> <br><br>
+			
+			Sanket Agrawal<br>
+			IIT Kanpur<br>
+			Email: <a href ="mailto:sanket@iitk.ac.in" target="_blank">sanket@iitk.ac.in</a>
+		</div>
+		<div class="index_head">Layout</div>
+		<div class="index_content">
+			The layout of this welcome page to the experiment has been copied from <a href="https://www.psytoolkit.org/" target="_blank">PsyToolkit's</a> survey layout.
+			<br><br>
+		</div>
+	</div>
   </body>
-  <script>
-  </script>
 </html>
