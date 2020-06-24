@@ -7,12 +7,15 @@ $(".image2").attr("src", 'animals/stim'+j+'.png');
 
 function uncheck(){
     var k =1
-    for(k = 1;k<9;k++){
+    for(k = 1;k<8;k++){
         $('#'+k).prop("value","5");
 		$('#'+k).tooltip('hide');
 		$('#checkbox'+k).prop("checked", false);
 		$('#rangetext'+k).text("Slide");
     }
+	$('#'+k).prop("value","5");
+	$('#'+k).tooltip('hide');
+	$('#rangetext'+k).text("Slide");
 };
 
 
@@ -54,7 +57,6 @@ $('#7').on('input change' ,function (){
 $('#8').on('input change' ,function (){
 	$(this).tooltip('show');
 	$('#rangetext8').text("");
-	$('#checkbox8').prop("checked", false);
 });
 
 $('#checkbox1').change(function (){
@@ -91,11 +93,6 @@ $('#checkbox7').change(function (){
 	$('#7').prop("value", "5");
 	$('#rangetext7').text("Slide");
 	$('#7').tooltip('hide');
-});
-$('#checkbox8').change(function (){
-	$('#8').prop("value", "5");
-	$('#rangetext8').text("Slide");
-	$('#8').tooltip('hide');
 });
 
 $("#foo").submit(function(event){
