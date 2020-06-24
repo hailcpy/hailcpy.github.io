@@ -120,12 +120,19 @@ function submitform($form){
     // setup some local variables
     console.log($form)
     // Let's select and cache all the fields
-    var $inputs = $form.find("input, select, button, textarea, range, checkbox");
+    var $inputs = $form.find("input, select, button, textarea");
     
     var serializedData = 'image1='+i+'&';
     serializedData += 'image2='+j+'&';
     // Serialize the data in the form
     serializedData += $form.serialize();
+	
+	for(k=1;k<8;k++){
+		if($('#checkbox'+k).prop("checked") == false){
+			let elementname = $('#checkbox'+k).attr('name')
+			serializedData += '&'+elementname+'=can'
+		}
+	}
     console.log(serializedData)
     // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
