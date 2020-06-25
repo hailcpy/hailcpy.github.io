@@ -1,3 +1,8 @@
+var random_id;
+$(document).ready(function(){
+	random_id = Math.floor(100000000 + Math.random()*900000000);
+});
+
 var i;
 var j;
 i = Math.floor(Math.random()*120)
@@ -133,7 +138,9 @@ function submitform($form){
 			serializedData += '&'+elementname+'=can'
 		}
 	}
+	serializedData += '&random_id='+random_id;
     console.log(serializedData)
+	
     // Let's disable the inputs for the duration of the Ajax request.
     // Note: we disable elements AFTER the form data has been serialized.
     // Disabled form elements will not be serialized.
@@ -156,6 +163,5 @@ function submitform($form){
 };
 
 $(".next2").click(function(){
-    $("body").replaceWith("<p style  = 'text-align:center; font-size: 50px;'>Thank you for taking part in the experiment</p>");
-    
+    $("body").replaceWith("<p style  = 'text-align:center; font-size: 50px;'>Thank you for taking part in the experiment! <br> <br> Your experiment ID is "+random_id+".</p>");
 })
